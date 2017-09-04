@@ -16,9 +16,11 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getHeroes();
+    debugger;
   }
 
   constructor(private heroService: HeroService, private router: Router) {
+
   }
 
   onSelect(hero: Hero): void {
@@ -27,6 +29,7 @@ export class HeroesComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+
   }
 
   gotoDetail(): void {
